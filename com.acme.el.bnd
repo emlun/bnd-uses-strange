@@ -1,0 +1,4 @@
+#-experiments: true
+-classpath=bin,lib/commons-el-1.0.jar
+-output=com.acme.el.jar
+Export-Package: com.acme.el
