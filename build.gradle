@@ -5,13 +5,11 @@ apply plugin: 'osgi'
 sourceCompatibility = 1.5
 version = '1.0'
 
-repositories {
-    mavenCentral()
+jar {
+    baseName = 'com.acme.el'
+    manifest {
+        symbolicName = baseName
+    }
 }
 
-dependencies {
-    compile(
-        [group: 'commons-el', name: 'commons-el', version: '1+']
-    )
 }
-
