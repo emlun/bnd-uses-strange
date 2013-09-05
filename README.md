@@ -3,7 +3,18 @@ bnd-uses-strange
 
 Strange behaviour of BND in Gradle < 1.7
 
-This project contains a single Java source file. When building the project as an OSGi bundle using Gradle 1.6, the manifest contains the following instruction in the Export-Package header:
+Building
+--------
+
+With [Gradle][gradle] installed, run
+
+    gradle assemble
+
+
+Gradle < 1.7
+------------
+
+When the project is built as an OSGi bundle using Gradle 1.6, the manifest contains the following instruction in the Export-Package header:
 
     Export-Package: com.acme.impl;uses:="com.acme.api";version="1.0"
 
@@ -14,4 +25,5 @@ Gradle 1.7
 ----------
 [Gradle 1.7 uses bnd 2.1.0][releasenotes], instead of bnd 1.50.0 which is used by earlier Gradle distributions. This problem does not occur when using Gradle 1.7.
 
+[gradle]: http://www.gradle.org/
 [releasenotes]: http://www.gradle.org/docs/1.7-rc-1/release-notes#bnd-library-used-by-osgi-plugin-updated
