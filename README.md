@@ -3,9 +3,9 @@ bnd-uses-strange
 
 Strange behaviour of BND in Gradle < 1.7
 
-This project contains a single Java source file. When building the project as an OSGi bundle using Gradle 1.6, the manifest contains the following instruction:
+This project contains a single Java source file. When building the project as an OSGi bundle using Gradle 1.6, the manifest contains the following instruction in the Export-Package header:
 
-Export-Package: com.acme.el;uses:="org.apache.commons.el";version="1.0"
+    Export-Package: com.acme.impl;uses:="com.acme.api";version="1.0"
 
 Despite the fact that the package org.apache.commons.el is only ever used inside a function, which should not affect other bundles importing the com.acme.el package, unless I've misunderstood how the uses directive works.
 
